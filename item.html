@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dominant Industry main</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap');
+
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		header{
+			width: 100%;
+			height: 100px;
+			display: flex;
+		}
+
+		header .container{
+			width: 1200px;
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			font-size: 18px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.logo img{
+			width: 100px;
+			height: 100px;
+		}
+
+		a{
+			text-decoration: none;
+			color: #6F6F6F;
+		}
+
+		li{
+			list-style: none;
+		}
+.navigation { list-style:none; cursor:pointer }
+.navigation ul li { 
+  width:30%;
+  float:left; 
+  margin-right:10px;
+  transition:all .3s ease 
+}
+.navigation li:hover { color:#654F43; transition:all .3s ease }
+.navigation li > a { position:relative }
+
+/*밑줄넣기 부분*/
+.navigation li > a::after {
+  content: '';
+  width: 0%;
+  left: 50%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  border-bottom: 2px solid #654F43;
+  transition:all .3s ease;
+}
+.navigation li:hover > a::after {
+  content: '';
+  width: 100%;
+  left: 0px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  border-bottom: 2px solid #654F43;
+  transition:all .3s ease;
+}
+
+		.navigation{
+			display: flex;
+			font-size: 18px;
+			gap: 60px;
+			flex: 1;
+			justify-content: center;
+			margin-right: 20px;
+			text-align: center;
+		}
+
+		.icon{
+			display: flex;
+			flex-flow: flex-end;
+			gap: 10px;
+		}
+
+
+		/*상품이미지&설명*/
+
+		.inks{
+			display: flex;
+
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+
+			font-family: Noto Sans KR;
+			font-size: 64px;
+			font-weight: 500;
+			line-height: 93px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #323232;
+
+
+			height: 150px;
+			background-color: white;
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+
+			margin-bottom: 60px;
+		}
+
+		.con1{
+			display: flex;
+			width: 1113px;
+			gap: 100px;
+
+			align-items: center;
+			justify-content: center;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 250px;
+		}
+
+		.con1img{
+			background-image: url(https://shop-phinf.pstatic.net/20220208_152/1644289823023DET8Q_JPEG/45425668731310167_1048107036.jpg?type=f296_296);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+
+			border-radius: 8px;
+			width: 500px;
+			height: 625px;
+
+		}
+
+		.con1text{
+			width: 513px;
+		}
+
+
+		/*제품상세페이지*/
+
+		.item_img{
+			display: flex;
+
+			width: 800px;
+
+			flex-flow: row wrap;
+
+			align-items: center;
+			justify-content: center;
+
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.item_img .container{
+			display: flex;
+			gap: 250px;
+			
+			align-items: center;
+			justify-content: center;
+
+			width: 800px;
+
+		}
+
+		.item_img .container li{
+			text-align: center;
+			font-size: 20px;
+
+			margin-bottom: 25px;
+		}		
+
+		.items{
+			width: 800px;
+			display: flex;
+			flex-flow: row wrap;
+
+			margin-top: 100px;
+			margin-bottom: 150px;
+		}
+
+		.item_img img{
+			width: 800px;
+			height: auto;
+		}
+
+
+
+		/*푸터*/
+		footer{
+			margin-top: auto;
+		}
+
+		footer .sns{
+			display: flex;
+
+			width: 100%;
+			height: 100px;
+			background-color: white;
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+		}
+
+		footer .sns .con{
+			width: 1200px;
+
+			display: flex;
+			gap: 30px;
+			justify-content: flex-end;
+			align-items: center;
+			margin-right: auto;
+			margin-left: auto;
+
+		}
+
+		footer .container{
+			width: 100%;
+			height: 250px;
+			background-color: #F0F0F0;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		footer .container .con2{
+			font-family: 'Noto Sans KR', sans-serif;
+
+			width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 300;
+			color: #4E4E4E;
+		}
+
+		.right_footer{
+			text-align: right;
+			align-items: right;
+		}
+
+		.all_footer{
+			width: 1200px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.footer_logo{
+			width: auto;
+			height: 100px;
+		}
+		
+		/*아이콘2*/
+		
+		.icon2{
+			width: 1100px;
+			display: flex;
+			margin-right: auto;
+			margin-left: auto;
+
+			justify-content: space-between;
+			align-items: center;
+
+			margin-bottom: 100px;
+		}
+
+		.info{
+			width: 513px;
+			display: flex;
+		}
+
+		.title{
+			margin-bottom: 15px;
+		}
+
+		.money{
+			margin-bottom: 24px;
+		}
+
+		h4{
+			margin-bottom: 23px;
+		}
+
+		.hr1{
+			margin-bottom: 45px;
+		}
+	</style>
+</head>
+<script type="text/javascript">
+(function(w, d, a){
+    w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+    };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+})(window, document, "//rum.beusable.net/load/b221219e000524u915");
+</script>
+<body>
+	<header>
+		<div class="container">
+			<a class="logo" href="index.html"><img src="https://pbs.twimg.com/profile_images/1377619640726257672/eNfCPG-F_400x400.jpg"></a>
+			<ul class="navigation">
+				<li><a href="#">제품 문의</a></li>
+				<li><a href="story.html">DOMINANT INDUSTRY</a></li>
+				<li><a href="items.html">INKS</a></li>
+				<li><a href="contact.html">CONTACT</a></li></li>
+			</ul>
+			<div class="icon">
+				<li><a href="#"><span class="material-symbols-outlined">
+search
+</span></a></li>
+				<li><a href="#"><span class="material-symbols-outlined">
+person
+</span></a></li>
+				<li><a href="#"><span class="material-symbols-outlined">
+shopping_bag
+</span></a></li>
+			</div>
+		</div>
+	</header>
+
+	<div class="inks">PEARL INKS</div>
+
+	<div class="icon2">
+
+		<a href="items.html">
+		<span class="material-symbols-outlined">toc</span></a>
+
+		<div class="icon2_container">
+			<a href="#">
+			<span class="material-symbols-outlined">keyboard_arrow_left</span></a>
+			<a href="#">
+			<span class="material-symbols-outlined">keyboard_arrow_right</span></a>
+		</div>
+	</div>
+
+<div class="con1">
+            <div class="con1img"></div>
+
+            <div class="con1text">
+                <h2 class="title">021<br>설원 Snowfield</h2>
+
+                <h4>25ml / 스탠다드</h4>
+
+                <h2 class="money">15,000 원</h2>
+
+                <hr class="hr1">
+                
+
+                <div class="info">
+                    <ul class="one">
+                        <li>배송방법</li>
+                        <li>배송비결제</li>
+                    </ul>
+                    <ul class="two">
+                    	<li>택배   3,000원</li>
+                        <li>70,000원 이상 무료 배송<br>
+							제주지역 추가 3,000원/도서산간 지역 추가 3,000원</li>
+                        <li>선결제</li>
+                    </ul>
+                </div>
+
+                <hr class="hr1">
+
+                <div class="info">
+                    <ul class="one">
+                        <li>총 상품 금액</li>
+                    </ul>
+                    <ul class="two">
+                        총 수량 1
+                    </ul>
+                    <ul class="three">
+                        15,000
+                    </ul>
+                </div>
+              
+                <div class="button"><p>구매하기</p></div>
+            </div>
+        </div>
+
+        <div class="item_img">
+        	<ul class="container">
+        		<li><a class="" href="#">제품정보</a></li>
+        		<li><a class="" href="#">제품후기</a></li>
+        	</ul>
+
+        	<hr class="line" align="center" style="border: solid 1px #CCCCCC; width: 70%;">
+
+        	<div class="items">
+	        	<img src="https://postfiles.pstatic.net/MjAyMjEyMTNfNDUg/MDAxNjcwOTMxOTM5NDAz.-PWrBtL707SSu23EvLqULhHvXmJRWQJswgQFiDsKGgEg.TyD0mY2DM-GhEqnJMpw0EaCM--AKVch2lpjikyHW9hcg.PNG.popopo0128/%EB%8C%80%EC%A7%80_1-1.png?type=w580">
+	        	<img src="https://postfiles.pstatic.net/MjAyMjEyMTNfMTM1/MDAxNjcwOTMxOTM5NTA3.xcKwmLpOUpBILc6Z0Gvszaad9esbl2IWGa4KeoryKikg.ZIZx7wvDRtoOZOaMrLQ1SBvisXWpX8hwp0lNcY2y9zQg.PNG.popopo0128/%EB%8C%80%EC%A7%80_5-1.png?type=w580">
+	        	<img src="https://postfiles.pstatic.net/MjAyMjEyMTNfNTUg/MDAxNjcwOTMxOTM5NDM5.LR1DhpYFAkfD5areeJhCYIlqo4tk96eCIa2g0cRDkUQg.7sQixLLXldba_-nSLcu1APu973iPgYLZWE9e8CLm2m4g.PNG.popopo0128/%EB%8C%80%EC%A7%80_6-2.png?type=w580">
+	        	<img src="https://postfiles.pstatic.net/MjAyMjEyMTNfMTY0/MDAxNjcwOTMxOTM5MzQz.zLRUrAEwtHvEIAC2wyePlRdgu-0N3nZbT7wESxoVBCQg.FgBiQ8Hwa21M9Wx5o7NNpcSxynpufiGL7lTh6J19XB4g.PNG.popopo0128/%EB%8C%80%EC%A7%80_7-1.png?type=w580">
+	        </div>
+        </div>
+
+
+	<footer>
+		<div class="sns">
+			<div class="con">
+				<li><a href="https://m.facebook.com/profile.php?id=100054350916188&_rdr"><img src="https://i.postimg.cc/wxh49cwn/59439-1.png"></a></li>
+				<li><a href="https://www.instagram.com/dominantindustry/"><img src="https://i.postimg.cc/QxZLbdzZ/1617440-1.png"></a></li>
+				<li><a href="https://twitter.com/dominant2019"><img src="https://i.postimg.cc/nc98KQ2k/1384033-1.png"></a></li>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="con2">
+				<a href="index.html"><img class="footer_logo" src="https://i.postimg.cc/htnp6WSw/image-14.png"></a>
+				<div class="all_footer">
+				<div class="left_footer">상호: 도미넌트 인더스트리 대표: 이성광 개인정보관리책임자: 이성광<br>
+		주소: 경기도 파주시 회동길 329 101호  사업자 등록번호: 210-26-63655 통신판매: 제 2020-경기파주-0972호</div>
+				<div class="right_footer">전화: 031 8071 8806<br>
+		이메일:dominantin@naver.com</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+</body>
+</html>
