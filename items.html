@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dominant Industry main</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap');
+
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		header{
+			width: 100%;
+			height: 100px;
+			display: flex;
+		}
+
+		header .container{
+			width: 1200px;
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			font-size: 18px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.logo img{
+			width: 100px;
+			height: 100px;
+		}
+
+		a{
+			text-decoration: none;
+			color: #6F6F6F;
+		}
+
+		li{
+			list-style: none;
+		}
+.navigation { list-style:none; cursor:pointer }
+.navigation ul li { 
+  width:30%;
+  float:left; 
+  margin-right:10px;
+  transition:all .3s ease 
+}
+.navigation li:hover { color:#654F43; transition:all .3s ease }
+.navigation li > a { position:relative }
+
+/*밑줄넣기 부분*/
+.navigation li > a::after {
+  content: '';
+  width: 0%;
+  left: 50%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  border-bottom: 2px solid #654F43;
+  transition:all .3s ease;
+}
+.navigation li:hover > a::after {
+  content: '';
+  width: 100%;
+  left: 0px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  border-bottom: 2px solid #654F43;
+  transition:all .3s ease;
+}
+
+		.navigation{
+			display: flex;
+			font-size: 18px;
+			gap: 60px;
+			flex: 1;
+			justify-content: center;
+			margin-right: 20px;
+			text-align: center;
+		}
+
+		.icon{
+			display: flex;
+			flex-flow: flex-end;
+			gap: 10px;
+		}
+
+
+		/*배너*/
+		.banner{
+			background-image: url(https://i.postimg.cc/fWYGDKz7/Group-48.png);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			height: 450px;
+			width: 100%;
+			color: #323232;
+			display: flex;
+			align-items: center;
+		}
+
+		.banner_container{
+			width: 1200px;
+
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		/*배너 아래 네비*/
+		.sub_nav{
+			width: 100%;
+			height: 100px;
+
+			background-color: white;
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+
+			margin-bottom: 100px;
+
+			display: flex;
+			align-items: center;
+		}
+
+		.sub_container{
+			width: 1200px;
+			display: flex;
+			gap: 45px;
+			align-items: center;
+			justify-content: flex-end;
+
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.sub_container li a{
+			color: #232323;
+			transition: all 0.3s ease-in;
+		}
+
+		.sub_container li a: hover{
+			color: beige;
+		}
+
+		/*상품*/
+		.item_container{
+			width: 1180px;
+			gap: 80px 18px;
+			display: flex;
+			flex-flow: row wrap;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 150px;
+		}
+
+		.item{
+			width: 280px;
+			height: 460px;
+		}
+
+
+		.item1_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_12/1644289342087ro7Ka_JPEG/45425187757526582_45451238.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item2_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_152/1644289823023DET8Q_JPEG/45425668731310167_1048107036.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item3_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_216/16442887691628qJEn_JPEG/45424614869223541_1250379637.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item4_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_180/1644311499348gNno9_JPEG/45447333982677746_864427892.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item5_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_4/1644311953954bt3IX_JPEG/45447788745712249_863957852.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item6_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_190/1644311837719omRdX_JPEG/45447672499625459_1391718860.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item7_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220326_223/1648271945632G76Ty_JPEG/49407788331716724_1502466086.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item8_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_181/1644310549482DDQH4_JPEG/45446384269443015_2081893218.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item9_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_224/1644310083832Qm87G_JPEG/45445918437586193_546942993.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item10_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_241/1644309943046mgupx_JPEG/45445777695833159_1041125304.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item11_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_58/16443096977596wLkp_JPEG/45445532551051045_580427403.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.item12_img{
+			width: 280px;
+			height: 359px;
+			background-image: url(https://shop-phinf.pstatic.net/20220208_216/16443104480724tjb1_JPEG/45446282889141779_356078450.jpg?type=f296_296);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+
+		.number{
+			display: flex;
+
+			justify-content: center;
+			align-items: center;
+
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.number_container{
+			display: flex;
+			gap: 50px;
+		}
+
+		/*푸터*/
+		footer{
+			margin-top: auto;
+		}
+
+		footer .sns{
+			display: flex;
+
+			width: 100%;
+			height: 100px;
+			background-color: white;
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+		}
+
+		footer .sns .con{
+			width: 1200px;
+
+			display: flex;
+			gap: 30px;
+			justify-content: flex-end;
+			align-items: center;
+			margin-right: auto;
+			margin-left: auto;
+
+		}
+
+		footer .container{
+			width: 100%;
+			height: 250px;
+			background-color: #F0F0F0;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		footer .container .con2{
+			font-family: 'Noto Sans KR', sans-serif;
+
+			width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 300;
+			color: #4E4E4E;
+		}
+
+		.right_footer{
+			text-align: right;
+			align-items: right;
+		}
+
+		.all_footer{
+			width: 1200px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.footer_logo{
+			width: auto;
+			height: 100px;
+		}
+		/*텍스트 정리*/
+
+		h1{
+			font-family: 'Noto Sans KR', sans-serif;
+
+			font-size: 64px;
+			font-weight: 600;
+			line-height: 92px;
+			letter-spacing: 0em;
+			text-align: left;
+
+		}
+
+		h4{
+			font-family: 'Noto Sans KR', sans-serif;
+			font-size: 24px;
+			font-weight: 350;
+			line-height: 35px;
+			letter-spacing: 0em;
+			text-align: left;
+		}
+
+		h6{
+			font-size: 14px;
+		}
+
+		h2{
+			margin-top: 50px;
+			font-weight: 500;
+			font-size: 28px;
+			line-height: 32px;
+			text-align: center;
+			flex: 0 0 100%;
+
+			margin-bottom: 36px;
+		}
+
+		h3{
+			font-family: Noto Sans KR;
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 22px;
+			letter-spacing: 0em;
+			text-align: left;
+
+			color: #232323;
+
+			margin-top: 13px;
+
+		}
+
+		h5{
+			font-family: Noto Sans KR;
+			font-size: 17px;
+			font-weight: 400;
+			line-height: 24px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #232323;
+
+		margin-bottom: 6px;
+
+		}
+
+		p{
+			font-family: 'Noto Sans KR', sans-serif;
+			font-size: 11px;
+			font-weight: 400;
+			line-height: 16px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #717171;
+		}
+
+		hr{
+
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.line{
+			margin-bottom: 75px;
+		}
+
+		/*잉크 네비*/
+		.ink_nav{
+			width: 1200px;
+
+			justify-content: center;
+			align-items: center;
+
+			margin-right: auto;
+			margin-left: auto;
+
+			margin-bottom: 15px;
+
+		}
+
+		.ink_container{
+			display: flex;
+						justify-content: center;
+			align-items: center;
+
+			gap: 100px;
+			font-family: Noto Sans KR;
+			font-size: 20px;
+			font-weight: 350;
+			line-height: 34px;
+			letter-spacing: 0em;
+			text-align: center;
+
+			color: #717171;
+		}
+		
+		.ink_container: hover{
+			color: pink;
+		}
+	</style>
+</head>
+<script type="text/javascript">
+(function(w, d, a){
+    w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+    };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+})(window, document, "//rum.beusable.net/load/b221219e000524u915");
+</script>
+<body>
+	<header>
+		<div class="container">
+			<a class="logo" href="index.html"><img src="https://pbs.twimg.com/profile_images/1377619640726257672/eNfCPG-F_400x400.jpg"></a>
+			<ul class="navigation">
+				<li><a href="#">제품 문의</a></li>
+				<li><a href="story.html">DOMINANT INDUSTRY</a></li>
+				<li><a href="items.html">INKS</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+			<ul class="icon">
+				<li><a href="#"><span class="material-symbols-outlined">
+search
+</span></a></li>
+				<li><a href="#"><span class="material-symbols-outlined">
+person
+</span></a></li>
+				<li><a href="#"><span class="material-symbols-outlined">
+shopping_bag
+</span></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="banner">
+		<div class="banner_container">
+			<h1>INK</h3>
+			<h4>자연의 색감을 담아낸 잉크</h4>
+		</div>
+	</div>
+
+	<ul class="sub_nav">
+		<div class="sub_container">
+			<li><a href="#">전체상품</a></li>
+			<li><a href="#">최신순</a></li>
+			<li><a href="#">과거순</a></li>
+			<li><a href="#">인기순</a></li>
+			<li><a href="#">가격순</a></li>
+		</div>
+	</ul>
+
+		<ul class="ink_nav">
+		<div class="ink_container">
+			<li><a href="#">리미티드</a></li>
+			<li><a href="#">스탠다드</a></li>
+			<li><a href="#">펄</a></li>
+		</div>
+	</ul>
+
+		<hr class="line" align="center" style="border: solid 1px #CCCCCC; width: 40%;">
+
+
+<div class="item_container">
+		<a href="#"><div class="item">
+			<figure class="item1">
+				<div class="item1_img"></div>
+				<h3>116 룽고 Lungo</h3>
+				<h5>15,000</h5>
+				<p>25ml /스탠다드/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="item.html">
+		<div class="item">
+			<figure class="item2">
+				<div class="item2_img"></div>
+				<h3>021 설원 Snowfield</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item3">
+				<div class="item3_img"></div>
+				<h3>020 석양 SUNSET</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item4">
+				<div class="item4_img"></div>
+				<h3>012 겨울 밤 Winter night</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+
+		<a href="#">
+		<div class="item">
+			<figure class="item5">
+				<div class="item5_img"></div>
+				<h3>017 페어리 포레스트 Fairy Forest</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item6">
+				<div class="item6_img"></div>
+				<h3>016 봄 들판 Spring field</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item7">
+				<div class="item7_img"></div>
+				<h3>022 이른 봄 Early Spring</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item8">
+				<div class="item8_img"></div>
+				<h3>006 은하수 파랑 Milky way Blue</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+
+		<a href="#">
+		<div class="item">
+			<figure class="item9">
+				<div class="item9_img"></div>
+				<h3>015 크롬 Crome</h3>
+				<h5>22,000</h5>
+				<p>25ml /미러 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item10">
+				<div class="item10_img"></div>
+				<h3>004 홀로그램 Hologram</h3>
+				<h5>25,000</h5>
+				<p>25ml /미러 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item11">
+				<div class="item11_img"></div>
+				<h3>003 샴페인 골드 Champagne Gold</h3>
+				<h5>22,000</h5>
+				<p>25ml /미러 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+		<a href="#">
+		<div class="item">
+			<figure class="item12">
+				<div class="item12_img"></div>
+				<h3>005 사과꽃 분홍 Apple Blossom</h3>
+				<h5>15,000</h5>
+				<p>25ml /펄 잉크/딥펜잉크/캘리잉크/만년필잉크</p>
+			</figure>
+		</div>
+		</a>
+
+			<hr align="center" style="border: solid 1px #CCCCCC; width: 100%;">
+
+				<ul class="number">
+		<div class="number_container">
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+		</div>
+	</ul>
+</div>
+
+	<footer>
+		<div class="sns">
+			<div class="con">
+				<li><a href="https://m.facebook.com/profile.php?id=100054350916188&_rdr"><img src="https://i.postimg.cc/wxh49cwn/59439-1.png"></a></li>
+				<li><a href="https://www.instagram.com/dominantindustry/"><img src="https://i.postimg.cc/QxZLbdzZ/1617440-1.png"></a></li>
+				<li><a href="https://twitter.com/dominant2019"><img src="https://i.postimg.cc/nc98KQ2k/1384033-1.png"></a></li>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="con2">
+				<a href="index.html"><img class="footer_logo" src="https://i.postimg.cc/htnp6WSw/image-14.png"></a>
+				<div class="all_footer">
+				<div class="left_footer">상호: 도미넌트 인더스트리 대표: 이성광 개인정보관리책임자: 이성광<br>
+		주소: 경기도 파주시 회동길 329 101호  사업자 등록번호: 210-26-63655 통신판매: 제 2020-경기파주-0972호</div>
+				<div class="right_footer">전화: 031 8071 8806<br>
+		이메일:dominantin@naver.com</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+</body>
+</html>
